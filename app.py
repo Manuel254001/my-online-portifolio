@@ -135,6 +135,7 @@ with left_column:
     with right_column:
        st.empty()
 
+
              
 
 
