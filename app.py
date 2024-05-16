@@ -1,6 +1,5 @@
 from PIL import Image
 
-
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
@@ -14,6 +13,7 @@ def load_lottieurl(url):
         return None
     return r.json()
 ## use local css
+# noinspection PyPackageRequirements
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -38,7 +38,7 @@ with st.container():
               "and drives my dedication. From the meticulous process of balancing ledgers to the strategic analysis of financial data, I find joy in unraveling the intricacies of financial management. What truly captivates me, however, is the transformative power of accounting software. These technological marvels not only streamline mundane tasks but also empower businesses to make data-driven decisions with precision and agility. The ability to harness the capabilities of accounting software fuels my enthusiasm, as I immerse myself in exploring their functionalities and leveraging their potential to optimize financial processes. To me, accounting software isn't just a tool; it's a gateway to efficiency, accuracy, and innovation in the realm of financial management.")
      st.write("[Learn More >](https://www.linkedin.com/in/emmanuel-muthomi-5816322aa)")
 
-#..... what i do...
+#..what i do...
 with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
@@ -119,9 +119,13 @@ with st.container():
     st.write("---")
     st.header("Get In Touch With Me!")
     st.write("##")
-   ###
+   ###<form action="https://**correct_form_submission_url**" method="POST">
+#</form>
     contact_form = """
-   <form action="https://formsubmit.co/manuelgold254@email.com" method="POST">
+   <form action="https://formsubmit.co/manuelgold254@email.com" method="POST"> 
+</form>
+
+   
    <input type="hidden" name="_captcha" value="false">
      <input type="text" name="name" placeholder= "Your name" required>
      <input type="email" name="email" placeholder= "Your email address" required>
@@ -134,6 +138,7 @@ with left_column:
     st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
        st.empty()
+
 
 
              
